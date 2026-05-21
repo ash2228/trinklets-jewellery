@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif), Georgia, serif;
+  --font-sans: var(--font-sans), system-ui, sans-serif;
+  
+  /* Main brand palette inspired by the logo */
+  --color-brand-cream: #F5F3F1;
+  --color-brand-secondary: #ECE7E4;
+  --color-brand-dark: #2B0A14;
+  --color-brand-beige: #D8CFCA;
+  --color-brand-gold: #6B001B;
+
+  /* Burgundy / wine monochrome scale */
+  --color-gold-50: #F8F4F5;
+  --color-gold-100: #EFE6E9;
+  --color-gold-200: #DCC9CF;
+  --color-gold-300: #C19AA6;
+  --color-gold-400: #9A5A6D;
+  --color-gold-500: #6B001B;
+  --color-gold-600: #570016;
+  --color-gold-700: #430011;
+  --color-gold-800: #2F000B;
+  --color-gold-900: #1A0006;
+}
+
+/* Base custom styles to enhance high-end luxury e-commerce transitions */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #FDFBF7;
+  }
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #C5A059;
+  border-radius: 9999px;
+}
+

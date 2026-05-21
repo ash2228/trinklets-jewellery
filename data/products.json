@@ -1,0 +1,114 @@
+[
+  {
+    "id": "ring001",
+    "name": "Rose Gold Crystal Ring",
+    "price": 1299,
+    "originalPrice": 1999,
+    "category": "Rings",
+    "images": [
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&q=80&w=600"
+    ],
+    "description": "Elegant rose gold ring with crystal finish. Handcrafted with precision, this band exudes timeless romance. Perfect for daily wear, engagements, or as an exquisite stacking ring.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "necklace001",
+    "name": "Minimalist Gold Chain Necklace",
+    "price": 2499,
+    "originalPrice": 3499,
+    "category": "Necklaces",
+    "images": [
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1611085583191-a3b1a40ffd50?auto=format&fit=crop&q=80&w=600"
+    ],
+    "description": "A stunning, dainty gold chain necklace that serves as the perfect layering cornerstone. Made from 18k premium gold plating over sterling silver, designed to catches the light beautifully.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "earring001",
+    "name": "Pearl Drop Earrings",
+    "price": 1599,
+    "originalPrice": 2299,
+    "category": "Earrings",
+    "images": [
+      "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1630012411391-72921ba0be3c?auto=format&fit=crop&q=80&w=600"
+    ],
+    "description": "Exquisite pearl drop earrings featuring genuine freshwater pearls. Crafted to sit elegantly against the neckline, these timeless earrings elevate both casual wear and evening attire.",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "bracelet001",
+    "name": "Premium Diamond Link Bracelet",
+    "price": 3899,
+    "originalPrice": 4999,
+    "category": "Bracelets",
+    "images": [
+      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=600"
+    ],
+    "description": "Dazzle with this premium linked bar bracelet embedded with fine brilliant cubic zirconia stones. Set in premium hypoallergenic metal, giving the look and feel of authentic luxury diamonds.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "ring002",
+    "name": "Emma Emerald Solitaire Ring",
+    "price": 1899,
+    "originalPrice": 2799,
+    "category": "Rings",
+    "images": [
+      "https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=600"
+    ],
+    "description": "Crafted with a premium emerald-cut solitaire stone, this statement ring captures standard vintage glamour blended with clean contemporary styling. Set on a slender, highly polished band.",
+    "inStock": true,
+    "featured": false
+  },
+  {
+    "id": "earring002",
+    "name": "Classic Golden Hoop Earrings",
+    "price": 999,
+    "originalPrice": 1499,
+    "category": "Earrings",
+    "images": [
+      "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&q=80&w=600"
+    ],
+    "description": "Classic gold hoops that never go out of style. Lightweight, comfortable, and perfect for building your ultimate ear stack, featuring a secure hinge clutch closure.",
+    "inStock": true,
+    "featured": true
+  },
+  {
+    "id": "necklace002",
+    "name": "Majestic Sapphire Pendant",
+    "price": 2999,
+    "originalPrice": 4299,
+    "category": "Necklaces",
+    "images": [
+      "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=600"
+    ],
+    "description": "A magnificent sapphire-colored center crystal embraced by a sparkling halo of micro-pave crystals on a premium gold-toned link chain, adding an element of royalty.",
+    "inStock": false,
+    "featured": false
+  },
+  {
+    "id": "bracelet002",
+    "name": "Celestial Pearl Bracelet",
+    "price": 2199,
+    "originalPrice": 2999,
+    "category": "Bracelets",
+    "images": [
+      "https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=600",
+      "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&q=80&w=600"
+    ],
+    "description": "Inspired by midnight clear skies, this bracelet matches carefully selected round pearls with starburst gold-plated spacers. Elegance in its ultimate purest form.",
+    "inStock": true,
+    "featured": false
+  }
+]
