@@ -36,6 +36,21 @@ export default function TermsAndConditions() {
           <p>
             All custom designs, typography layouts, illustrations, photos, logos, brand titles, and concepts represented on Trinklets are protected under domestic and international intellectual property copyright acts. Any unapproved distribution or copying is strictly prohibited.
           </p>
+
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">5. Limitation of Liability</h2>
+          <p>
+            Trinklets Jewellery will not be liable for any indirect, incidental, special, consequential, or punitive damages resulting from your use of or inability to use the site or services.
+          </p>
+
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">6. Contact Information</h2>
+          <p>
+            For any questions regarding these Terms of Service:
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Email:</strong> palakhans19@gmail.com</li>
+            <li><strong>Phone:</strong> 9891361503</li>
+            <li><strong>Address:</strong> Subash Nagar 19/7</li>
+          </ul>
         </div>
       </main>
       <Footer />

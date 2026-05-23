@@ -22,31 +22,52 @@ export default function PrivacyPolicy() {
             When you visit the site, we collect certain details regarding your device, your interaction with the space, and information necessary to process your checkout or subscribe to the newsletter:
           </p>
           <ul className="list-disc pl-5 space-y-1">
-            <li><strong>Personal Device Details:</strong> Browser version, IP address, cookie identifier data, time zones, or individual search keywords.</li>
-            <li><strong>Transactional Information:</strong> First and Last name, billing/shipping address, electronic email, phone number, and items purchased.</li>
-            <li><strong>Payment Logs:</strong> Razorpay handles payment tokens and transaction receipts. Real billing card credentials are never processed or retained directly on our systems.</li>
+            <li><strong>Email Address:</strong> Collected when you subscribe to our newsletter or place an order.</li>
+            <li><strong>Transactional Information:</strong> First and Last name, billing/shipping address, email, phone number, and items purchased.</li>
+            <li><strong>Payment Information:</strong> Razorpay handles all payment processing. Card details are never stored on our servers.</li>
+            <li><strong>Device Information:</strong> Browser type, IP address, and pages visited to improve user experience.</li>
           </ul>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">2. Sharing Personal Information</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">2. How We Use Your Information</h2>
           <p>
-            We share your Personal Information with reliable third-party services that help us provide a seamless delivery experience:
+            We use your personal information to:
           </p>
           <ul className="list-disc pl-5 space-y-1">
-            <li>Our backend framework database hosted globally (MongoDB cluster).</li>
-            <li>Razorpay Technologies for real-time security processing and signature verifying of checkout balances.</li>
-            <li>Courier shipping companies for completing physical package deliveries safely to your home.</li>
+            <li>Process and fulfill your orders.</li>
+            <li>Send order confirmations and shipping updates.</li>
+            <li>Send newsletter updates (only if you've opted in).</li>
+            <li>Respond to customer inquiries and support requests.</li>
+            <li>Improve our website and customer experience.</li>
+          </ul>
+          
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">3. Sharing Personal Information</h2>
+          <p>
+            We share your information only with trusted service providers:
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Razorpay Technologies:</strong> For secure payment processing.</li>
+            <li><strong>Courier Services:</strong> For order delivery and tracking.</li>
+            <li><strong>Database Hosting:</strong> For secure storage of order and customer information.</li>
           </ul>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">3. Cookies</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">4. Cookies</h2>
           <p>
             Our e-commerce store utilizes standard browser cookies to retain the contents of your shopping cart as you navigate across pages, and to analyze generic web traffic data. You are free to deactivate cookies in your computer browser, though doing so might disrupt your checkout workflow.
           </p>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">4. Customer Rights</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">5. Customer Rights</h2>
           <p>
             You have the right to request access to the information we store about you, to edit incorrect records, or ask us to delete records from our systems, except where required for standard commercial bookkeeping.
           </p>
-        </div>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">6. Contact Us</h2>
+          <p>
+            If you have questions about our Privacy Policy or your personal data, please contact us:
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Email:</strong> palakhans19@gmail.com</li>
+            <li><strong>Phone:</strong> 9891361503</li>
+            <li><strong>Address:</strong> Subash Nagar 19/7</li>
+          </ul>        </div>
       </main>
       <Footer />
     </>

@@ -37,8 +37,29 @@ export default function RefundPolicy() {
 
           <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">3. Refund Processing</h2>
           <p>
-            Once your returned item is received at our Jaipur offices and undergoes an inspection, we will email you a notification of receipt. If approved, your refund value will be processed, and immediately credited back to your original source of payment (Razorpay, credit/debit card, UPI) within 5-7 business days.
+            Once your returned item is received and undergoes inspection, we will email you a notification of receipt. If approved, your refund value will be credited back to your original payment method within 5-7 business days.
           </p>
+
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">4. How to Initiate a Return</h2>
+          <p>
+            To start a return:
+          </p>
+          <ol className="list-decimal pl-5 space-y-1">
+            <li>Contact us at palakhans19@gmail.com within 7 days of receiving your order.</li>
+            <li>Provide your order number and reason for return.</li>
+            <li>Receive return shipping instructions.</li>
+            <li>Ship the item back in its original packaging.</li>
+          </ol>
+
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">5. Contact Us</h2>
+          <p>
+            For any questions about returns or refunds:
+          </p>
+          <ul className="list-disc pl-5 space-y-1">
+            <li><strong>Email:</strong> palakhans19@gmail.com</li>
+            <li><strong>Phone:</strong> 9891361503</li>
+            <li><strong>Address:</strong> Subash Nagar 19/7</li>
+          </ul>
         </div>
       </main>
       <Footer />
