@@ -10,6 +10,8 @@ import ToastContainer from '@/components/ToastContainer';
 import { motion } from 'motion/react';
 import { ArrowRight, Sparkles, Star, Quote, Eye } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
+import { RiShoppingBag2Fill } from "react-icons/ri";
+
 
 export default function Home() {
   const [products, setProducts] = useState<any[]>([]);
@@ -201,10 +203,10 @@ export default function Home() {
       </section>
 
       {/* Dynamic Products Grid Section */}
-      <section className="bg-brand-secondary py-24 px-4 sm:px-6 lg:px-8">
+      <section className="bg-brand-secondary py-24 px-2 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto space-y-16">
-          <div className="flex flex-col sm:flex-row justify-between items-end gap-4 border-b border-gold-500/20 pb-6">
-            <div className="space-y-2 text-left">
+          <div className="flex flex-col sm:flex-row justify-start sm:justify-between items-start text-start gap-4 border-b border-gold-500/20 pb-6">
+            <div className="space-y-2 text-start">
               <span className="text-xs uppercase tracking-widest text-gold-600 font-bold">Trending Trinklets</span>
               <h2 className="font-serif text-3xl sm:text-4xl tracking-wide text-brand-dark font-normal">The Best Sellers</h2>
             </div>
@@ -228,7 +230,7 @@ export default function Home() {
               ))}
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-1">
               {featuredProducts.map((product) => {
                 const discount = Math.round(
                   ((product.originalPrice - product.price) / product.originalPrice) * 100
@@ -249,11 +251,24 @@ export default function Home() {
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
                         />
+                        
+                        {/* Circular Add to Cart Badge */}
+                        {product.inStock && (
+                          <button
+                            onClick={() => addToCart(product)}
+                            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full group-hover:-translate-y-2 z-10 h-12 w-12 rounded-full bg-neutral-900 hover:bg-gold-500 text-gold-100 hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110"
+                            title="Add to cart"
+                          >
+                            <RiShoppingBag2Fill/>
+                          </button>
+                        )}
+                        
                         {discount > 0 && (
                           <span className="absolute top-2 left-2 bg-gold-400 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider rounded-sm shadow-xs">
                             {discount}% Off
                           </span>
                         )}
+                        
                         <Link
                           href={`/product/${product.id}`}
                           className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
@@ -284,24 +299,6 @@ export default function Home() {
                           )}
                         </div>
                       </div>
-                    </div>
-
-                    <div className="pt-4">
-                      {product.inStock ? (
-                        <button
-                          onClick={() => addToCart(product)}
-                          className="w-full text-center bg-neutral-900 hover:bg-neutral-800 text-gold-100 text-xs font-bold uppercase tracking-wider py-2.5 rounded-sm transition-colors cursor-pointer"
-                        >
-                          Add To Cart
-                        </button>
-                      ) : (
-                        <button
-                          disabled
-                          className="w-full text-center bg-neutral-200 text-neutral-400 text-xs font-bold uppercase tracking-wider py-2.5 rounded-sm line-through cursor-not-allowed"
-                        >
-                          Out of Stock
-                        </button>
-                      )}
                     </div>
                   </div>
                 );
