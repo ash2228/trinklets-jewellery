@@ -45,23 +45,23 @@ export default function ShippingPolicy() {
           <p>
             If your package arrives damaged or is lost in transit:
           </p>
-          <ol className=\"list-decimal pl-5 space-y-1\">
+          <ol className="list-decimal pl-5 space-y-1">
             <li>Document the damage with photos immediately upon receipt.</li>
             <li>Contact us at palakhans19@gmail.com with your order number and photos.</li>
             <li>We will work with the courier service to file a claim and resolve the issue.</li>
             <li>You may receive a replacement or refund, subject to our investigation.</li>
           </ol>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4\">6. Shipping to International Addresses</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">6. Shipping to International Addresses</h2>
           <p>
             Currently, we only ship within India. International shipping may be available in the future. Please contact us for inquiries about international orders.
           </p>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4\">7. Contact Us</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">7. Contact Us</h2>
           <p>
             For shipping inquiries or concerns:
           </p>
-          <ul className=\"list-disc pl-5 space-y-1\">
+          <ul className="list-disc pl-5 space-y-1">
             <li><strong>Email:</strong> palakhans19@gmail.com</li>
             <li><strong>Phone:</strong> 9891361503</li>
             <li><strong>Address:</strong> Subash Nagar 19/7</li>

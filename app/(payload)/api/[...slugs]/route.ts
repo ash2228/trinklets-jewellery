@@ -1,0 +1,1 @@
+export { REST_GET, REST_POST, REST_DELETE, REST_PATCH } from '@payloadcms/next/routes'
