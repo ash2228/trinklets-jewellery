@@ -23,7 +23,6 @@ export default function CartPage() {
     <>
       <Navbar />
       <CartDrawer />
-      <ToastContainer />
 
       <main className="pt-28 pb-20 select-none min-h-[80vh] bg-brand-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

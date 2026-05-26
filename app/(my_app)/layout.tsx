@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { Cormorant_Garamond, Inter } from 'next/font/google';
 import { CartProvider } from '@/context/CartContext';
 import './globals.css';
+import ToastContainer from '@/components/ToastContainer';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
       <body suppressHydrationWarning className="font-sans antialiased text-brand-dark bg-brand-cream selection:bg-gold-200/40 selection:text-brand-dark overflow-x-hidden min-h-screen">
         <CartProvider>
+          <ToastContainer />
           {children}
         </CartProvider>
       </body>

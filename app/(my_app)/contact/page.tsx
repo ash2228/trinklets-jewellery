@@ -56,7 +56,6 @@ export default function Contact() {
     <>
       <Navbar />
       <CartDrawer />
-      <ToastContainer />
 
       <main className="pt-28 pb-20 select-none">
         <section className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 mb-16">

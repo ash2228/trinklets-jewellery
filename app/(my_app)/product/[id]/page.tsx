@@ -1,27 +1,16 @@
-import { promises as fs } from 'fs';
-import path from 'path';
 import Link from 'next/link';
 import ProductDetailsClient from './ProductDetailsClient';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
+import { getProductByIdentifier, getProducts } from '@/lib/products';
 
-async function getProducts() {
-  try {
-    const jsonDirectory = path.join(process.cwd(), 'data');
-    const fileContents = await fs.readFile(path.join(jsonDirectory, 'products.json'), 'utf8');
-    return JSON.parse(fileContents);
-  } catch (error) {
-    console.error('Failed to read products.json server-side:', error);
-    return [];
-  }
-}
+export const dynamic = 'force-dynamic';
 
 export default async function ProductPage({ params }: { params: Promise<{ id: string }> }) {
   const resolvedParams = await params;
   const id = resolvedParams.id;
   
-  const products = await getProducts();
-  const product = products.find((p: any) => p.id === id);
+  const product = await getProductByIdentifier(id);
 
   if (!product) {
     // Elegant product 404
@@ -46,8 +35,9 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
   }
 
   // Find related products in same category (exclude current product)
+  const products = await getProducts();
   const related = products
-    .filter((p: any) => p.category === product.category && p.id !== product.id)
+    .filter((p) => p.category === product.category && p.id !== product.id)
     .slice(0, 4);
 
   return <ProductDetailsClient product={product} relatedProducts={related} />;

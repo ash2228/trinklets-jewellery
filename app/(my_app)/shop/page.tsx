@@ -27,7 +27,7 @@ function ShopContent() {
   useEffect(() => {
     async function loadProducts() {
       try {
-        const res = await fetch('/api/products');
+        const res = await fetch('/api/storefront/products');
         if (res.ok) {
           const data = await res.json();
           setProducts(data);
@@ -284,7 +284,6 @@ export default function Shop() {
     <>
       <Navbar />
       <CartDrawer />
-      <ToastContainer />
 
       <Suspense fallback={
         <div className="pt-32 text-center text-sm font-light text-neutral-400">

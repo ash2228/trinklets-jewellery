@@ -6,3 +6,6 @@ allowBuilds:
   re2: true
   sharp: true
   unrs-resolver: true
+peerDependencyRules:
+  allowedVersions:
+    '@tailwindcss/typography>tailwindcss': '4'

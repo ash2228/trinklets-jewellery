@@ -14,7 +14,6 @@ export default function About() {
     <>
       <Navbar />
       <CartDrawer />
-      <ToastContainer />
 
       <main className="pt-28 pb-20 select-none">
         

@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     async function loadProducts() {
       try {
-        const res = await fetch('/api/products');
+        const res = await fetch('/api/storefront/products');
         if (res.ok) {
           const data = await res.json();
           setProducts(data);
@@ -69,7 +69,6 @@ export default function Home() {
     <>
       <Navbar />
       <CartDrawer />
-      <ToastContainer />
 
       {/* Hero Section */}
       <section className="relative min-h-screen bg-brand-secondary flex items-center justify-center overflow-hidden">
@@ -104,7 +103,7 @@ export default function Home() {
               transition={{ duration: 0.9, delay: 0.1 }}
               className="font-serif text-5xl sm:text-7xl font-extralight tracking-widest text-brand-dark leading-tight"
             >
-              CRAFTED FOR YOU
+              𝑾𝒆𝒂𝒓 𝒕𝒉𝒆 𝑴𝒂𝒊𝒏 𝑪𝒉𝒂𝒓𝒂𝒄𝒕𝒆𝒓 𝑬𝒏𝒆𝒓𝒈𝒚
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
@@ -112,8 +111,7 @@ export default function Home() {
               transition={{ duration: 1.2, delay: 0.3 }}
               className="max-w-2xl mx-auto text-sm sm:text-base font-light text-neutral-500 tracking-wide leading-relaxed font-sans"
             >
-              Discover Trinklets, where premium quality 18k gold plating meets delicate, masterfully refined designs. Effortless statements for everyday luxury.
-            </motion.p>
+              Discover 𝗮𝗻𝘁𝗶-𝘁𝗮𝗿𝗻𝗶𝘀𝗵 jewellery crafted for everyday 𝗰𝗼𝗻𝗳𝗶𝗱𝗲𝗻𝗰𝗲, pieces that are 𝘁𝗿𝗲𝗻𝗱𝘆,𝗺𝗶𝗻𝗶𝗺𝗮𝗹 and 𝗽𝗲𝗿𝗳𝗲𝗰𝘁 for everyday styling because your outfit deserves more than basics             </motion.p>
           </div>
 
           <motion.div
@@ -251,7 +249,7 @@ export default function Home() {
                           className="object-cover group-hover:scale-105 transition-transform duration-500"
                           referrerPolicy="no-referrer"
                         />
-                        
+
                         {/* Circular Add to Cart Badge */}
                         {product.inStock && (
                           <button
@@ -259,16 +257,16 @@ export default function Home() {
                             className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full group-hover:-translate-y-2 z-10 h-12 w-12 rounded-full bg-neutral-900 hover:bg-gold-500 text-gold-100 hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110"
                             title="Add to cart"
                           >
-                            <RiShoppingBag2Fill/>
+                            <RiShoppingBag2Fill />
                           </button>
                         )}
-                        
+
                         {discount > 0 && (
                           <span className="absolute top-2 left-2 bg-gold-400 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider rounded-sm shadow-xs">
                             {discount}% Off
                           </span>
                         )}
-                        
+
                         <Link
                           href={`/product/${product.id}`}
                           className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"

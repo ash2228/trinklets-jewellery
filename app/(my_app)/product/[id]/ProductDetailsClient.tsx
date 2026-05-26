@@ -36,7 +36,6 @@ export default function ProductDetailsClient({ product, relatedProducts }: Produ
     <>
       <Navbar />
       <CartDrawer />
-      <ToastContainer />
 
       <main className="pt-32 pb-24 select-none bg-brand-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

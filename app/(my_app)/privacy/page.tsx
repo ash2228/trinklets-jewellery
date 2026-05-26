@@ -35,7 +35,7 @@ export default function PrivacyPolicy() {
           <ul className="list-disc pl-5 space-y-1">
             <li>Process and fulfill your orders.</li>
             <li>Send order confirmations and shipping updates.</li>
-            <li>Send newsletter updates (only if you've opted in).</li>
+            <li>Send newsletter updates (only if you&apos;ve opted in).</li>
             <li>Respond to customer inquiries and support requests.</li>
             <li>Improve our website and customer experience.</li>
           </ul>
