@@ -21,7 +21,7 @@ export default function Home() {
   useEffect(() => {
     async function loadProducts() {
       try {
-        const res = await fetch('/api/storefront/products');
+        const res = await fetch('/api/products');
         if (res.ok) {
           const data = await res.json();
           setProducts(data);
@@ -92,7 +92,7 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="inline-flex items-center gap-2 px-3.5 py-1.5 bg-white/80 backdrop-blur-xs border border-gold-500/15 rounded-full text-gold-600 text-xs font-semibold uppercase tracking-widest leading-none mx-auto"
           >
-            <Sparkles className="h-3.5 w-3.5 text-gold-500" /> Handcrafted Timeless Minimalism
+            <Sparkles className="h-3.5 w-3.5 text-gold-500" /> Wear The Main Character Energy
           </motion.div>
 
           {/* Core Brand Headlines */}
@@ -103,7 +103,7 @@ export default function Home() {
               transition={{ duration: 0.9, delay: 0.1 }}
               className="font-serif text-5xl sm:text-7xl font-extralight tracking-widest text-brand-dark leading-tight"
             >
-              𝑾𝒆𝒂𝒓 𝒕𝒉𝒆 𝑴𝒂𝒊𝒏 𝑪𝒉𝒂𝒓𝒂𝒄𝒕𝒆𝒓 𝑬𝒏𝒆𝒓𝒈𝒚
+              CRAFTED FOR YOU
             </motion.h1>
             <motion.p
               initial={{ opacity: 0 }}
