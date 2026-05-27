@@ -54,7 +54,7 @@ function ShopContent() {
   const categories = ['All', 'Rings', 'Necklaces', 'Earrings', 'Bracelets'];
 
   // Filter products based on search & category
-  const filteredProducts = products.filter((product) => {
+  const filteredProducts = products.length && products.filter((product) => {
     const matchesCategory = activeCategory === 'All' || product.category === activeCategory;
     const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase()) || 
                           product.description.toLowerCase().includes(searchQuery.toLowerCase());

@@ -35,7 +35,7 @@ export default function Home() {
     loadProducts();
   }, []);
 
-  const featuredProducts = products.filter(p => p.featured).slice(0, 4);
+  const featuredProducts = products.length && products.filter(p => p.featured).slice(0, 4);
 
   const collections = [
     {
@@ -229,7 +229,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-1">
-              {featuredProducts.map((product) => {
+              {featuredProducts?.map((product) => {
                 const discount = Math.round(
                   ((product.originalPrice - product.price) / product.originalPrice) * 100
                 );
