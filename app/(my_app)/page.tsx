@@ -229,7 +229,7 @@ export default function Home() {
             </div>
           ) : (
             <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-1">
-              {featuredProducts?.map((product) => {
+              {(featuredProducts as any)?.map((product: any) => {
                 const discount = Math.round(
                   ((product.originalPrice - product.price) / product.originalPrice) * 100
                 );
