@@ -4,6 +4,7 @@ import Products from './collections/Products'
 import Users from './collections/Users'
 import Media from './collections/Media'
 import sharp from 'sharp'
+import { s3Storage } from "@payloadcms/storage-s3"
 
 const config = buildConfig({
   secret: process.env.PAYLOAD_SECRET || '',
@@ -15,7 +16,27 @@ const config = buildConfig({
     url: process.env.MONGODB_URI || '',
   }),
   sharp,
-  debug: true
+  debug: true,
+  plugins: [
+    s3Storage({
+      collections: {
+        media: true,
+      },
+      bucket: process.env.S3_BUCKET || "",
+      config: {
+        credentials: {
+          accessKeyId: process.env.S3_ACCESS_KEY_ID || "",
+          secretAccessKey: process.env.S3_SECRET_ACCESS_KEY || "",
+        },
+        region: "auto",
+        endpoint: process.env.R2_ENDPOINT,
+        forcePathStyle: true,
+      },
+      generateFileURL: ({ filename }) => {
+          return `${process.env.R2_PUBLIC_URL}/${filename}`
+        }
+    }),
+  ]
 })
 
 export default config

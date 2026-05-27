@@ -46,7 +46,7 @@ function mediaPath(media: string | MediaDoc | undefined): string | null {
   }
 
   if (media.filename) {
-    return `/api/media/file/${media.filename}`
+    return `${process.env.R2_PUBLIC_URL}/${media.filename}`
   }
 
   return null
