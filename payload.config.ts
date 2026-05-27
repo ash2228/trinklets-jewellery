@@ -6,7 +6,7 @@ import Media from './collections/Media'
 import sharp from 'sharp'
 
 const config = buildConfig({
-  secret: process.env.PAYLOAD_SECRET || '',
+  secret: process.env.PAYLOAD_SECRET || 'qslq2i/4a824ddQTtDa71uF5Z1YEs5Ua5QUduUi8uyA=',
   admin: {
     user: 'users',
   },
