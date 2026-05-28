@@ -63,7 +63,7 @@ export default function ShippingPolicy() {
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li><strong>Email:</strong> palakhans19@gmail.com</li>
-            <li><strong>Phone:</strong> 9891361503</li>
+            {/* <li><strong>Phone:</strong> 9891361503</li> */}
             <li><strong>Address:</strong> Subash Nagar 19/7</li>
           </ul>
         </div>

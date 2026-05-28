@@ -19,7 +19,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: 'Trinklets Jewellery | Premium Fine Jewellery Shop',
-  description: 'Premium, elegant, minimalistic handcrafted fine jewellery of Trinklets. Shop modern rose gold rings, bespoke necklaces, and classic pearl drop earrings online.',
+  description: 'Premium, elegant, minimalistic handcrafted fine jewellery of Trinklets. Shop modern rose rings, bespoke necklaces, and classic pearl drop earrings online.',
   metadataBase: new URL('https://trinkletsjewellery.in'),
 };
 

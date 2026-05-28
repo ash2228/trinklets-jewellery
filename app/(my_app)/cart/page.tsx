@@ -42,7 +42,7 @@ export default function CartPage() {
               <div className="space-y-2">
                 <h2 className="font-serif text-2xl font-light tracking-wide text-brand-dark">Your bag is empty</h2>
                 <p className="text-neutral-500 text-sm font-light leading-relaxed">
-                  Browse our exquisite rings, classic drop pearl earrings, and layered minimalism gold chains to find your next favorite statement accessory.
+                  Browse our exquisite rings, classic drop pearl earrings, and layered minimalism chains to find your next favorite statement accessory.
                 </p>
               </div>
               <div className="pt-2">

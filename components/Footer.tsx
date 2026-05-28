@@ -75,7 +75,7 @@ export default function Footer() {
             </div>
             <div>
               <h4 className="text-white font-medium text-sm tracking-widest uppercase">Water Proof</h4>
-              <p className="text-xs text-neutral-400 mt-1">Water proof material used in jewellery1.</p>
+              <p className="text-xs text-neutral-400 mt-1">Water proof material used in jewellery.</p>
             </div>
           </div>
         </div>

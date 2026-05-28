@@ -97,7 +97,7 @@ function ShopContent() {
             {activeCategory === 'All' ? 'Our Entire Collection' : activeCategory}
           </h1>
           <p className="text-sm font-light text-neutral-500 max-w-sm mx-auto leading-relaxed">
-            Every piece is designed to tell an individual narrative. Handcrafted with pristine gold layering & freshwater pearls.
+            Every piece is designed to tell an individual narrative. Handcrafted with top quality materials.
           </p>
         </div>
       </section>

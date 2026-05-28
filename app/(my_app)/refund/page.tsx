@@ -17,9 +17,9 @@ export default function RefundPolicy() {
             At Trinklets Jewellery, our customer satisfaction is our top priority. Since each jewelry piece is individually handcrafted and treated with exquisite care, we enforce a transparent, fair, and reliable return structure.
           </p>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">1. 7-Day Hassle-Free Returns</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">1. 3-Day Hassle-Free Returns</h2>
           <p>
-            We offer our boutique customers a <strong>7-day return guarantee</strong> from the exact date their package was shipped. If 7 days have passed since delivery, we unfortunately cannot offer you a cash refund or a item replacement.
+            We offer our boutique customers a <strong>3-day return guarantee</strong> from the exact date their package was shipped. If 3 days have passed since delivery, we unfortunately cannot offer you a cash refund or a item replacement.
           </p>
           <p>
             To qualify for a returned item, the jewelry must be absolutely unused, unworn, unscratched, and in the exact gorgeous state in which it was received, complete with its velvet box, handwritten gift cards, wax-seals, and labels fully attached.
@@ -45,7 +45,7 @@ export default function RefundPolicy() {
             To start a return:
           </p>
           <ol className="list-decimal pl-5 space-y-1">
-            <li>Contact us at palakhans19@gmail.com within 7 days of receiving your order.</li>
+            <li>Contact us at palakhans19@gmail.com within 4 days of receiving your order.</li>
             <li>Provide your order number and reason for return.</li>
             <li>Receive return shipping instructions.</li>
             <li>Ship the item back in its original packaging.</li>
@@ -57,7 +57,7 @@ export default function RefundPolicy() {
           </p>
           <ul className="list-disc pl-5 space-y-1">
             <li><strong>Email:</strong> palakhans19@gmail.com</li>
-            <li><strong>Phone:</strong> 9891361503</li>
+            {/* <li><strong>Phone:</strong> 9891361503</li> */}
             <li><strong>Address:</strong> Subash Nagar 19/7</li>
           </ul>
         </div>
