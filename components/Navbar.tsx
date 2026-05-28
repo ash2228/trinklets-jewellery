@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useCart } from '@/context/CartContext';
 import { Menu, X, ShoppingBag, ArrowRight } from 'lucide-react';
+import { useNavigationLoading } from '@/context/NavigationLoading';
 import { motion, AnimatePresence } from 'motion/react';
 
 export default function Navbar() {
@@ -38,6 +39,7 @@ export default function Navbar() {
     { name: 'About Us', href: '/about' },
     { name: 'Contact Us', href: '/contact' },
   ];
+  const { setNavigating } = useNavigationLoading();
 
   return (
     <>
@@ -58,7 +60,7 @@ export default function Navbar() {
           </button>
 
           {/* Logo Brand Title */}
-          <Link href="/" className="flex flex-col items-center">
+          <Link href="/" className="flex flex-col items-center" onClick={() => setNavigating(true)}>
             <span className="font-serif text-2xl sm:text-3xl font-medium tracking-[0.25em] text-neutral-900 leading-none">
               TRINKLETS
             </span>
@@ -78,6 +80,7 @@ export default function Navbar() {
                   className={`hover:text-gold-600 transition-colors relative py-1 ${
                     isActive ? 'text-gold-600' : ''
                   }`}
+                  onClick={() => setNavigating(true)}
                 >
                   {link.name}
                   {isActive && (
@@ -157,15 +160,16 @@ export default function Navbar() {
                   const isActive = pathname === link.href;
                   return (
                     <Link
-                      key={link.name}
-                      href={link.href}
-                      className={`text-lg font-serif tracking-wide border-b border-neutral-800 pb-3 flex items-center justify-between ${
-                        isActive ? 'text-gold-300' : 'text-neutral-300 hover:text-white'
-                      }`}
-                    >
-                      {link.name}
-                      <ArrowRight className="h-4 w-4 opacity-50" />
-                    </Link>
+                          key={link.name}
+                          href={link.href}
+                          className={`text-lg font-serif tracking-wide border-b border-neutral-800 pb-3 flex items-center justify-between ${
+                            isActive ? 'text-gold-300' : 'text-neutral-300 hover:text-white'
+                          }`}
+                          onClick={() => setNavigating(true)}
+                        >
+                          {link.name}
+                          <ArrowRight className="h-4 w-4 opacity-50" />
+                        </Link>
                   );
                 })}
               </div>
