@@ -84,19 +84,19 @@ export default function Contact() {
                 </div>
                 <div>
                   <h4 className="text-xs uppercase tracking-widest font-semibold text-neutral-400">Email Concierge</h4>
-                  <p className="text-sm font-medium text-neutral-800 mt-1">hello@trinkletsjewellery.in</p>
+                  <p className="text-sm font-medium text-neutral-800 mt-1">palakhans19@gmail.com</p>
                 </div>
               </div>
-
+{/* 
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-white text-gold-600 rounded-sm shadow-xs border border-neutral-200/20">
                   <Phone className="h-5 w-5" />
                 </div>
                 <div>
                   <h4 className="text-xs uppercase tracking-widest font-semibold text-neutral-400">Phone Support</h4>
-                  <p className="text-sm font-medium text-neutral-800 mt-1">+91 98765 43210</p>
+                  <p className="text-sm font-medium text-neutral-800 mt-1">+91 9891361503</p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-white text-gold-600 rounded-sm shadow-xs border border-neutral-200/20">
@@ -105,7 +105,7 @@ export default function Contact() {
                 <div>
                   <h4 className="text-xs uppercase tracking-widest font-semibold text-neutral-400">Corporate Atelier</h4>
                   <p className="text-sm font-medium text-neutral-800 mt-1">
-                    Trinklets Atelier, 402, MI Road, Opp. Sanganeri Gate, Jaipur, Rajasthan, 302001, India.
+                    Trinklets Atelier, New Delhi, India.
                   </p>
                 </div>
               </div>

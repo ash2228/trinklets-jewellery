@@ -51,7 +51,7 @@ function ShopContent() {
     }
   }, [searchParams]);
 
-  const categories = ['All', 'Rings', 'Necklaces', 'Earrings', 'Bracelets'];
+  const categories = ['All', 'Necklaces', 'Earrings', 'Bracelets', 'Rings'];
 
   // Filter products based on search & category
   const filteredProducts = products?.filter((product) => {

@@ -56,8 +56,8 @@ export default function Footer() {
               <Truck className="h-6 w-6 text-gold-500" />
             </div>
             <div>
-              <h4 className="text-white font-medium text-sm tracking-widest uppercase">Pan-India Premium Delivery</h4>
-              <p className="text-xs text-neutral-400 mt-1">Fully insured shipping with velvet box standard packaging.</p>
+              <h4 className="text-white font-medium text-sm tracking-widest uppercase">Premium Delivery</h4>
+              <p className="text-xs text-neutral-400 mt-1">Fast premium delivery in 2-6 business days.</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -65,8 +65,8 @@ export default function Footer() {
               <ShieldCheck className="h-6 w-6 text-gold-500" />
             </div>
             <div>
-              <h4 className="text-white font-medium text-sm tracking-widest uppercase">100% Certified Original</h4>
-              <p className="text-xs text-neutral-400 mt-1">Authentic 18k and 22k gold plating, genuine certifications.</p>
+              <h4 className="text-white font-medium text-sm tracking-widest uppercase">Anti-Tarnish</h4>
+              <p className="text-xs text-neutral-400 mt-1">100% anti-tarnish pieces</p>
             </div>
           </div>
           <div className="flex items-center gap-4">
@@ -74,8 +74,8 @@ export default function Footer() {
               <Sparkles className="h-6 w-6 text-gold-500" />
             </div>
             <div>
-              <h4 className="text-white font-medium text-sm tracking-widest uppercase">Bespoke Gifting Card</h4>
-              <p className="text-xs text-neutral-400 mt-1">Complementary personalized wax-sealed handwritten cards.</p>
+              <h4 className="text-white font-medium text-sm tracking-widest uppercase">Water Proof</h4>
+              <p className="text-xs text-neutral-400 mt-1">Water proof material used in jewellery1.</p>
             </div>
           </div>
         </div>
@@ -91,7 +91,7 @@ export default function Footer() {
             <span className="text-[10px] uppercase tracking-[0.5em] text-gold-300 mt-1 pl-1">JEWELLERY</span>
           </div>
           <p className="text-sm font-light text-neutral-400 max-w-sm leading-relaxed">
-            Welcome to Trinklets Jewellery. We are dedicated to offering women clean-cut, sophisticated, minimalist, and luxury daily wear accessories. Handcrafted in India, enjoyed worldwide.
+            Welcome to Trinklets Jewellery. We are dedicated to offering clean-cut, sophisticated, minimalist, and luxury daily wear accessories. Handcrafted in India, enjoyed worldwide.
           </p>
           <div className="pt-2 text-xs text-neutral-500 font-mono tracking-wide">
             domain: <span className="text-neutral-400">trinkletsjewellery.in</span>
@@ -172,7 +172,7 @@ export default function Footer() {
       {/* Deepest Copyright Footer section */}
       <div className="bg-neutral-950 border-t border-neutral-800/60 py-6 text-xs text-neutral-500 font-light text-center">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-4">
-          <p>© 2026 Trinklets Jewellery (trinkletsjewellery.in). Designed with elegant luxury minimalism.</p>
+          <p>© Trinklets Jewellery (trinkletsjewellery.in). Designed with elegant luxury minimalism.</p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-neutral-300 transition-colors">Privacy</Link>
             <span>•</span>

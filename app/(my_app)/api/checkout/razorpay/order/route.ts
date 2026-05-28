@@ -1,14 +1,48 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { connectDB, saveInMemoryOrder } from '@/lib/db';
 import Order from '@/models/Order';
+import { getProductByIdentifier } from '@/lib/products';
 
 export async function POST(req: NextRequest) {
   try {
-    const { customerName, customerEmail, customerPhone, shippingAddress, items, totalAmount } = await req.json();
+    const { customerName, customerEmail, customerPhone, shippingAddress, items } = await req.json();
 
-    if (!customerEmail || !customerName || !shippingAddress || !items || !items.length || !totalAmount) {
+    if (!customerEmail || !customerName || !shippingAddress || !items || !items.length) {
       return NextResponse.json({ error: 'Missing required checkout information.' }, { status: 400 });
     }
+
+    // Validate requested cart items against the latest product catalog
+    const validatedItems: Array<{ id: string; name: string; price: number; quantity: number; image: string; category: string }> = [];
+    let cartSubTotal = 0;
+
+    for (const item of items) {
+      if (!item?.id || !item?.quantity || item.quantity <= 0) {
+        return NextResponse.json({ error: 'Invalid cart item payload.' }, { status: 400 });
+      }
+
+      const product = await getProductByIdentifier(item.id);
+      if (!product) {
+        return NextResponse.json({ error: `Product not found for item id ${item.id}` }, { status: 400 });
+      }
+
+      const quantity = Number(item.quantity) || 1;
+      const price = Number(product.price) || 0;
+      const validatedItem = {
+        id: product.id,
+        name: product.name,
+        price,
+        quantity,
+        image: product.images[0] || '',
+        category: product.category,
+      };
+
+      validatedItems.push(validatedItem);
+      cartSubTotal += price * quantity;
+    }
+
+    const shippingFee = cartSubTotal > 699 || cartSubTotal === 0 ? 0 : 65;
+    const jewelleryGst = Math.round(cartSubTotal * 0.03);
+    const totalAmount = cartSubTotal + shippingFee;
 
     // Connect to database
     const conn = await connectDB();
@@ -58,7 +92,7 @@ export async function POST(req: NextRequest) {
       customerEmail: customerEmail.toLowerCase(),
       customerPhone,
       shippingAddress,
-      items,
+      items: validatedItems,
       totalAmount,
       razorpayOrderId,
       status: 'Pending',

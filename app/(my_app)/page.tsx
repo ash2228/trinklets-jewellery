@@ -11,6 +11,7 @@ import { motion } from 'motion/react';
 import { ArrowRight, Sparkles, Star, Quote, Eye } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import { RiShoppingBag2Fill } from "react-icons/ri";
+import { Button } from '@/components/ui/button';
 
 
 export default function Home() {
@@ -39,30 +40,33 @@ export default function Home() {
 
   const collections = [
     {
-      name: 'Exquisite Rings',
+      name: 'Exquisite Bracelets',
       desc: 'Elegant bands crafted to express everlasting connections.',
-      image: 'https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&q=80&w=600',
-      tag: 'Rings',
+      image: '/images/breclet.png',
+      tag: 'Bracelets',
+      isBra: true
     },
     {
       name: 'Bespoke Necklaces',
       desc: 'Graceful statements that trace light beautifully.',
-      image: 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?auto=format&fit=crop&q=80&w=600',
+      image: '/images/neclace.jpg',
       tag: 'Necklaces',
+      isBra: false
     },
     {
       name: 'Glimmering Earrings',
       desc: 'Freshwater pearls & daily studs made for light stacking.',
-      image: 'https://images.unsplash.com/photo-1635767798638-3e25273a8236?auto=format&fit=crop&q=80&w=600',
+      image: '/images/earrings.jpg',
       tag: 'Earrings',
+      isBra: false
     },
   ];
 
   const instagramShots = [
-    'https://images.unsplash.com/photo-1603561591411-07134e71a2a9?auto=format&fit=crop&q=80&w=400',
-    'https://images.unsplash.com/photo-1611085583191-a3b1a40ffd50?auto=format&fit=crop&q=80&w=400',
-    'https://images.unsplash.com/photo-1630012411391-72921ba0be3c?auto=format&fit=crop&q=80&w=400',
-    'https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=40&w=400',
+    '/images/earrings.jpg',
+    '/images/breclet.png',
+    '/images/neclace.jpg',
+    '/api/media/file/A912BA5C-BB9D-4944-A09A-4860F685E029-400x400.jpg?2026-05-28T11%3A40%3A57.973Z',
   ];
 
   return (
@@ -159,7 +163,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto space-y-16">
           <div className="text-center space-y-2">
             <span className="text-xs uppercase tracking-widest text-gold-600 font-bold">Curated Edits</span>
-            <h2 className="font-serif text-3xl sm:text-4xl tracking-wide text-brand-dark font-normal">Featured Families</h2>
+            <h2 className="font-serif text-3xl sm:text-4xl tracking-wide text-brand-dark font-normal">Featured Categories</h2>
             <div className="h-0.5 w-12 bg-gold-300 mx-auto" />
           </div>
 
@@ -175,7 +179,7 @@ export default function Home() {
                     alt={col.name}
                     fill
                     loading="lazy"
-                    className="object-cover group-hover:scale-105 transition-transform duration-700"
+                    className={`object-cover group-hover:scale-105 transition-transform duration-700 ${col.isBra ? "object-bottom" : ""}`}
                     referrerPolicy="no-referrer"
                   />
                   <div className="absolute inset-0 bg-linear-to-t from-black/25 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -191,7 +195,7 @@ export default function Home() {
                     href={`/shop?category=${col.tag}`}
                     className="inline-flex items-center gap-1 text-xs uppercase font-semibold text-neutral-800 hover:text-gold-600 tracking-wider transition-colors"
                   >
-                    Explore Family <ArrowRight className="h-3 w-3" />
+                    Explore Category <ArrowRight className="h-3 w-3" />
                   </Link>
                 </div>
               </div>
@@ -250,17 +254,6 @@ export default function Home() {
                           referrerPolicy="no-referrer"
                         />
 
-                        {/* Circular Add to Cart Badge */}
-                        {product.inStock && (
-                          <button
-                            onClick={() => addToCart(product)}
-                            className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-full group-hover:-translate-y-2 z-10 h-12 w-12 rounded-full bg-neutral-900 hover:bg-gold-500 text-gold-100 hover:text-white flex items-center justify-center transition-all duration-300 shadow-lg hover:shadow-xl hover:scale-110"
-                            title="Add to cart"
-                          >
-                            <RiShoppingBag2Fill />
-                          </button>
-                        )}
-
                         {discount > 0 && (
                           <span className="absolute top-2 left-2 bg-gold-400 text-white text-[10px] font-bold px-2 py-0.5 uppercase tracking-wider rounded-sm shadow-xs">
                             {discount}% Off
@@ -296,6 +289,16 @@ export default function Home() {
                             </span>
                           )}
                         </div>
+                    {/* Circular Add to Cart Badge */}
+                    {product.inStock && (
+                      <Button
+                        onClick={() => addToCart(product)}
+                        className="cursor-pointer block w-full rounded-sm uppercase font-bold text-xs text-white/90"
+                        title="Add to cart"
+                      >
+                        Add To Cart
+                      </Button>
+                    )}
                       </div>
                     </div>
                   </div>

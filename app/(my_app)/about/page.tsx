@@ -16,7 +16,7 @@ export default function About() {
       <CartDrawer />
 
       <main className="pt-28 pb-20 select-none">
-        
+
         {/* Editorial Heading */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 text-center space-y-4 mb-16">
           <span className="text-xs uppercase tracking-[0.25em] text-gold-600 font-bold">The Authentic Journey</span>
@@ -30,33 +30,37 @@ export default function About() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-24">
           <div className="relative h-[480px] rounded-sm overflow-hidden bg-neutral-200 shadow-sm">
             <Image
-              src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?auto=format&fit=crop&q=80&w=800"
+              src="/images/logo.jpg"
               alt="Artisan Crafting Jewellery"
               fill
               priority
-              className="object-cover"
+              className="object-cover scale-110"
               referrerPolicy="no-referrer"
             />
           </div>
 
           <div className="space-y-6 text-neutral-600 font-light leading-relaxed text-sm sm:text-base">
             <h2 className="font-serif text-2xl text-neutral-900 tracking-wide font-normal">
-              Designed with a feminine touch, handmade with love.
+              Designed with a Passion.
             </h2>
             <p>
-              Founded in 2026, **Trinklets Jewellery** was born out of a desire to redefine luxury accessories for the modern woman. We believe jewelry shouldn&rsquo;t only be reserved for rare occasions; luxury should be an effortless, quiet, daily pleasure.
+              At Trinklets, our story started back in 2021 with a simple vision — creating jewellery that feels personal, stylish, and made for everyone. What began as a small passion slowly became something bigger, with people wearing Trinklets during everyday moments, special occasions, late-night outings, college days, trips, and memories that stayed forever.
             </p>
             <p>
-              Our collections represent the intersection of beautiful aesthetic minimalism and the richness of Indian craftsmanship. Every pendant, clasp, earring stem, and ring band is designed in-house, focusing on soft organic forms, clean-cut symmetry, and skin-friendly metals.
+              We took time away to grow, improve, and come back with something better than before. And now, Trinklets is returning — stronger, sharper, and more refined. This comeback brings jewellery that is not only beautiful but also made for real life with anti-tarnish and waterproof quality designed to last through every moment.
             </p>
             <p>
-              By opting for 18k premium gold vermeil layering over solid sterling silver, we deliver the exact look, weight, and luxurious tactile experience of solid gold jewelry at a fraction of the cost, making genuine fine jewelry accessible.
+              Trinklets was never just about jewellery. It’s about confidence, self-expression, and wearing something that feels like a part of you. No matter who you are or what your style is, our pieces are made to make you feel bold, effortless, and timeless.
+            </p>
+            <p>
+              This is not just a comeback.
+              This is the beginning of a bigger era for Trinklets.
             </p>
           </div>
         </section>
 
         {/* Core Pillars */}
-        <section className="bg-neutral-100 py-20 border-y border-neutral-200">
+        {/* <section className="bg-neutral-100 py-20 border-y border-neutral-200">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div className="text-center space-y-2">
               <span className="text-xs uppercase tracking-widest text-gold-500 font-bold">Uncompromising Details</span>
@@ -105,7 +109,7 @@ export default function About() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
       </main>
 

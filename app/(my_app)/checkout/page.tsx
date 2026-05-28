@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useCart } from '@/context/CartContext';
-import { CheckCircle2, ShoppingBag, CreditCard, ShieldCheck, Mail, ArrowRight, ShieldAlert, CheckCircle, Smartphone } from 'lucide-react';
+import { CheckCircle2, ShoppingBag, CreditCard, ShieldCheck, Mail, ArrowRight, ShieldAlert, CheckCircle, Smartphone, Truck } from 'lucide-react';
 
 export default function CheckoutPage() {
   const { cart, cartTotal, clearCart, addToast } = useCart();
@@ -41,10 +41,10 @@ export default function CheckoutPage() {
   }, []);
 
   // Cart summary calculations
-  const shippingThreshold = 2000;
-  const shippingFee = cartTotal > shippingThreshold || cartTotal === 0 ? 0 : 150;
+  const shippingThreshold = 699;
+  const shippingFee = cartTotal > shippingThreshold || cartTotal === 0 ? 0 : 65;
   const jewelleryGst = Math.round(cartTotal * 0.03);
-  const totalAmount = cartTotal + shippingFee + jewelleryGst;
+  const totalAmount = cartTotal + shippingFee;
 
   if (cart.length === 0 && checkoutStep === 'form') {
     return (
@@ -83,7 +83,6 @@ export default function CheckoutPage() {
       customerPhone: phone,
       shippingAddress,
       items: cart,
-      totalAmount,
     };
 
     try {
@@ -108,7 +107,7 @@ export default function CheckoutPage() {
         // Open Actual Official Razorpay Widget
         const options = {
           key: data.keyId,
-          amount: Math.round(totalAmount * 100),
+          amount: Math.round(data.amount * 100),
           currency: 'INR',
           name: 'Trinklets Jewellery',
           description: 'Premium Handmade Luxury Handbags & Rings',
@@ -374,10 +373,10 @@ export default function CheckoutPage() {
                     <span>Selected items Subtotal</span>
                     <span className="font-medium text-brand-dark">₹{cartTotal.toLocaleString('en-IN')}</span>
                   </div>
-                  <div className="flex justify-between">
+                  {/* <div className="flex justify-between">
                     <span>GST (3% Jewelry Tax)</span>
                     <span className="font-medium text-brand-dark">₹{jewelleryGst.toLocaleString('en-IN')}</span>
-                  </div>
+                  </div> */}
                   <div className="flex justify-between">
                     <span>Insured Courier delivery</span>
                     {shippingFee === 0 ? (
@@ -396,8 +395,8 @@ export default function CheckoutPage() {
                 </div>
 
                 <div className="flex items-center gap-2 p-3 bg-white/60 border border-gold-500/15 text-neutral-700 text-xs rounded-sm font-sans">
-                  <ShieldCheck className="h-4 w-4 shrink-0 text-gold-500" />
-                  <span>Complies with full security guidelines. Invoices generated on verification.</span>
+                  <Truck className="h-4 w-4 shrink-0 text-gold-500" />
+                  <span>Free Delivery on orders above ₹699</span>
                 </div>
               </div>
 

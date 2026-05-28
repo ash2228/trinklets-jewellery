@@ -9,6 +9,7 @@ import CartDrawer from '@/components/CartDrawer';
 import ToastContainer from '@/components/ToastContainer';
 import { useCart } from '@/context/CartContext';
 import { ShoppingCart, ShoppingBag, ArrowLeft, Shield, Sparkles, RefreshCw, Eye } from 'lucide-react';
+import ImageLightbox from '@/components/ImageLightbox';
 import { useRouter } from 'next/navigation';
 
 interface ProductDetailsClientProps {
@@ -18,6 +19,7 @@ interface ProductDetailsClientProps {
 
 export default function ProductDetailsClient({ product, relatedProducts }: ProductDetailsClientProps) {
   const [activeImageIdx, setActiveImageIdx] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
   const { addToCart, setCartOpen } = useCart();
   const router = useRouter();
@@ -58,14 +60,20 @@ export default function ProductDetailsClient({ product, relatedProducts }: Produ
               
               {/* Primary Image View */}
               <div className="relative aspect-square w-full overflow-hidden bg-brand-secondary rounded-sm border border-gold-500/10">
-                <Image
-                  src={product.images[activeImageIdx] || product.images[0]}
-                  alt={product.name}
-                  fill
-                  priority
-                  className="object-cover transition-all"
-                  referrerPolicy="no-referrer"
-                />
+                <button
+                  onClick={() => setLightboxOpen(true)}
+                  className="w-full h-full block relative"
+                  aria-label="Open image fullscreen"
+                >
+                  <Image
+                    src={product.images[activeImageIdx] || product.images[0]}
+                    alt={product.name}
+                    fill
+                    priority
+                    className="object-cover transition-all"
+                    referrerPolicy="no-referrer"
+                  />
+                </button>
                 {discount > 0 && (
                   <span className="absolute top-4 left-4 bg-gold-400 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider rounded-sm shadow-sm">
                     {discount}% Off
@@ -94,6 +102,14 @@ export default function ProductDetailsClient({ product, relatedProducts }: Produ
                     </button>
                   ))}
                 </div>
+              )}
+
+              {lightboxOpen && (
+                <ImageLightbox
+                  images={product.images}
+                  startIndex={activeImageIdx}
+                  onClose={() => setLightboxOpen(false)}
+                />
               )}
 
             </div>
