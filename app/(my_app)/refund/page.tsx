@@ -25,22 +25,13 @@ export default function RefundPolicy() {
             To qualify for a returned item, the jewelry must be absolutely unused, unworn, unscratched, and in the exact gorgeous state in which it was received, complete with its velvet box, handwritten gift cards, wax-seals, and labels fully attached.
           </p>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">2. Non-Returnable Items</h2>
-          <p>
-            Due to strict sanitary guidelines, the following product categories cannot be returned under any conditions:
-          </p>
-          <ul className="list-disc pl-5 space-y-1">
-            <li>Earrings and nose pin accessories.</li>
-            <li>Bespoke jewelry tailored to customized client sizes.</li>
-            <li>Promotional items purchased during major clearance sales.</li>
-          </ul>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">3. Refund Processing</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">2. Refund Processing</h2>
           <p>
             Once your returned item is received and undergoes inspection, we will email you a notification of receipt. If approved, your refund value will be credited back to your original payment method within 5-7 business days.
           </p>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">4. How to Initiate a Return</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">3. How to Initiate a Return</h2>
           <p>
             To start a return:
           </p>
@@ -51,7 +42,7 @@ export default function RefundPolicy() {
             <li>Ship the item back in its original packaging.</li>
           </ol>
 
-          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">5. Contact Us</h2>
+          <h2 className="font-serif text-xl text-neutral-900 font-medium pt-4">4. Contact Us</h2>
           <p>
             For any questions about returns or refunds:
           </p>
