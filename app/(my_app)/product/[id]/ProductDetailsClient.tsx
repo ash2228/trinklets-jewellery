@@ -203,12 +203,8 @@ export default function ProductDetailsClient({ product, relatedProducts }: Produ
                   <span>100% Secure Checkout</span>
                 </div>
                 <div className="flex items-center gap-2.5 text-xs text-neutral-500 font-sans">
-                  <Sparkles className="h-4 w-4 text-gold-500 shrink-0" />
-                  <span>Certified 18k Plated</span>
-                </div>
-                <div className="flex items-center gap-2.5 text-xs text-neutral-500 font-sans">
                   <RefreshCw className="h-4 w-4 text-gold-500 shrink-0" />
-                  <span>7-Day Return Scheme</span>
+                  <span>3-Day Return Scheme</span>
                 </div>
               </div>
 
