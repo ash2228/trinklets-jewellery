@@ -56,6 +56,7 @@ export default function CheckoutPage() {
             <p className="text-sm font-light text-neutral-500 max-w-sm">You do not have any items in your shopping cart to complete. Explore our jewelry models to add custom pieces.</p>
           </div>
           <Link
+          prefetch
             href="/shop"
             className="inline-flex bg-neutral-900 border border-transparent hover:bg-neutral-800 text-gold-100 uppercase tracking-widest text-xs font-bold px-8 py-3.5 rounded-sm transition-colors cursor-pointer"
           >
@@ -461,12 +462,14 @@ export default function CheckoutPage() {
 
               <div className="pt-4 flex flex-col sm:flex-row justify-center gap-4">
                 <Link
+                prefetch
                   href="/shop"
                   className="inline-flex items-center justify-center bg-neutral-900 hover:bg-neutral-800 text-gold-100 uppercase tracking-widest text-xs font-bold px-8 py-3.5 rounded-sm transition-colors cursor-pointer"
                 >
                   Continue Shopping <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
                 <Link
+                prefetch
                   href="/contact"
                   className="inline-flex items-center justify-center border border-neutral-300 hover:bg-neutral-50 text-neutral-700 uppercase tracking-widest text-xs font-bold px-8 py-3.5 rounded-sm transition-colors"
                 >

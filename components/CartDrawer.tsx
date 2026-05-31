@@ -57,6 +57,7 @@ export default function CartDrawer() {
                     <p className="text-neutral-500 text-sm mt-1 max-w-xs">Explore our elegant handcrafted collections to add your first premium piece.</p>
                   </div>
                   <Link
+                  prefetch
                     href="/shop"
                     onClick={() => setCartOpen(false)}
                     className="mt-2 inline-flex items-center justify-center bg-neutral-900 text-gold-100 hover:bg-neutral-800 transition-colors uppercase px-6 py-2.5 text-xs font-semibold tracking-widest border border-transparent rounded-sm"
@@ -139,6 +140,7 @@ export default function CartDrawer() {
 
                 <div className="grid grid-cols-1 gap-2 pt-2">
                   <Link
+                  prefetch
                     href="/checkout"
                     onClick={() => setCartOpen(false)}
                     className="w-full text-center bg-neutral-900 hover:bg-neutral-800 text-gold-100 transition-colors uppercase py-3.5 text-xs font-bold tracking-widest border border-transparent rounded-sm flex items-center justify-center gap-2 shadow-md cursor-pointer"

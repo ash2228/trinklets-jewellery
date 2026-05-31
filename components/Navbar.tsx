@@ -60,7 +60,7 @@ export default function Navbar() {
           </button>
 
           {/* Logo Brand Title */}
-          <Link href="/" className="flex flex-col items-center" onClick={() => setNavigating(true)}>
+          <Link href="/" className="flex flex-col items-center" onClick={() => setNavigating(true)} prefetch>
             <span className="font-serif text-2xl sm:text-3xl font-medium tracking-[0.25em] text-neutral-900 leading-none">
               TRINKLETS
             </span>
@@ -81,6 +81,7 @@ export default function Navbar() {
                     isActive ? 'text-gold-600' : ''
                   }`}
                   onClick={() => setNavigating(true)}
+                  prefetch
                 >
                   {link.name}
                   {isActive && (
@@ -160,6 +161,7 @@ export default function Navbar() {
                   const isActive = pathname === link.href;
                   return (
                     <Link
+                    prefetch
                           key={link.name}
                           href={link.href}
                           className={`text-lg font-serif tracking-wide border-b border-neutral-800 pb-3 flex items-center justify-between ${
@@ -177,7 +179,7 @@ export default function Navbar() {
               <div className="p-6 border-t border-neutral-800 text-center">
                 <p className="text-xs text-neutral-500 font-sans">© 2026 Trinklets Jewellery. All rights reserved.</p>
                 <div className="mt-1 flex justify-center gap-4 text-[10px] text-neutral-400 font-medium">
-                  <Link href="/privacy" className="hover:underline">Privacy</Link>
+                  <Link href="/privacy" className="hover:underline" prefetch>Privacy</Link>
                   <span>•</span>
                   <Link href="/terms" className="hover:underline">Terms</Link>
                 </div>

@@ -45,6 +45,7 @@ export default function ProductDetailsClient({ product, relatedProducts }: Produ
           {/* Back button */}
           <div className="mb-8">
             <Link
+            prefetch
               href="/shop"
               className="inline-flex items-center gap-2 text-xs uppercase tracking-widest font-semibold text-neutral-500 hover:text-brand-dark transition-colors"
             >
@@ -247,6 +248,7 @@ export default function ProductDetailsClient({ product, relatedProducts }: Produ
                             </span>
                           )}
                           <Link
+                          prefetch
                             href={`/product/${relatedP.id}`}
                             className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer"
                           >
@@ -260,7 +262,7 @@ export default function ProductDetailsClient({ product, relatedProducts }: Produ
                         <div className="text-center space-y-1">
                           <p className="text-[10px] text-neutral-400 uppercase tracking-widest font-semibold">{relatedP.category}</p>
                           <h3 className="font-serif text-sm tracking-wide text-neutral-900 leading-tight line-clamp-1">
-                            <Link href={`/product/${relatedP.id}`} className="hover:text-gold-500 transition-colors">
+                            <Link href={`/product/${relatedP.id}`} className="hover:text-gold-500 transition-colors" prefetch>
                               {relatedP.name}
                             </Link>
                           </h3>

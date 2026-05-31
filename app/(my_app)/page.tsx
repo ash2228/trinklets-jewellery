@@ -127,12 +127,14 @@ export default function Home() {
             <Link
               href="/shop"
               className="group inline-flex items-center justify-center bg-brand-dark text-gold-100 hover:bg-gold-500 hover:text-white transition-all duration-300 uppercase px-8 py-4 text-xs font-bold tracking-[0.25em] rounded-sm shadow-md gap-2 cursor-pointer w-full sm:w-auto"
+              prefetch
             >
               Shop Collection <ArrowRight className="h-4 w-4 group-hover:translate-x-1.5 transition-transform" />
             </Link>
             <Link
               href="/about"
               className="inline-flex items-center justify-center border border-gold-500/20 bg-white/40 backdrop-blur-xs hover:bg-white text-neutral-700 hover:text-brand-dark transition-all uppercase px-8 py-4 text-xs font-bold tracking-[0.25em] rounded-sm cursor-pointer w-full sm:w-auto"
+              prefetch
             >
               Our Story
             </Link>
@@ -194,6 +196,7 @@ export default function Home() {
                   <Link
                     href={`/shop?category=${col.tag}`}
                     className="inline-flex items-center gap-1 text-xs uppercase font-semibold text-neutral-800 hover:text-gold-600 tracking-wider transition-colors"
+                    prefetch
                   >
                     Explore Category <ArrowRight className="h-3 w-3" />
                   </Link>
@@ -215,6 +218,7 @@ export default function Home() {
             <Link
               href="/shop"
               className="text-xs uppercase font-bold tracking-widest text-brand-dark/80 hover:text-gold-500 transition-colors flex items-center gap-1 pb-1"
+              prefetch
             >
               Browse All Products <ArrowRight className="h-3.5 w-3.5" />
             </Link>
@@ -263,6 +267,7 @@ export default function Home() {
                         <Link
                           href={`/product/${product.id}`}
                           className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center"
+                          prefetch
                         >
                           <span className="bg-white/90 text-neutral-900 px-4 py-2 text-xs font-semibold uppercase tracking-widest flex items-center gap-1 shadow-sm hover:bg-neutral-900 hover:text-white transition-colors">
                             <Eye className="h-3.5 w-3.5" /> Details
@@ -275,7 +280,7 @@ export default function Home() {
                           {product.category}
                         </p>
                         <h3 className="font-serif text-base tracking-wide text-neutral-900 leading-tight line-clamp-1">
-                          <Link href={`/product/${product.id}`} className="hover:text-gold-500 transition-colors">
+                          <Link href={`/product/${product.id}`} className="hover:text-gold-500 transition-colors" prefetch>
                             {product.name}
                           </Link>
                         </h3>

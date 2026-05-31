@@ -26,7 +26,7 @@ export default function CartPage() {
 
       <main className="pt-28 pb-20 select-none min-h-[80vh] bg-brand-cream">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          
+
           {/* Header */}
           <div className="text-center py-12 max-w-sm mx-auto space-y-2 border-b border-gold-500/15 mb-12">
             <span className="text-[10px] uppercase tracking-[0.25em] text-gold-600 font-bold">Your Selection</span>
@@ -47,6 +47,7 @@ export default function CartPage() {
               </div>
               <div className="pt-2">
                 <Link
+                  prefetch
                   href="/shop"
                   className="inline-flex bg-brand-dark border border-transparent hover:bg-gold-500 hover:text-white text-gold-100 uppercase tracking-widest text-xs font-bold px-8 py-4 rounded-sm transition-all shadow-md cursor-pointer"
                 >
@@ -56,7 +57,7 @@ export default function CartPage() {
             </div>
           ) : (
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
-              
+
               {/* Product list side */}
               <div className="lg:col-span-8 space-y-6">
                 <h3 className="font-serif text-xl tracking-wide text-brand-dark font-normal border-b border-gold-500/15 pb-4">
@@ -66,7 +67,7 @@ export default function CartPage() {
                 <div className="divide-y divide-gold-500/10">
                   {cart.map((item) => (
                     <div key={item.id} className="py-6 flex flex-col sm:flex-row gap-6 items-start sm:items-center justify-between first:pt-0">
-                      
+
                       <div className="flex gap-4 sm:gap-6 items-center flex-1">
                         {/* Thumbnail */}
                         <div className="relative w-24 h-24 sm:w-28 sm:h-28 overflow-hidden rounded-sm bg-brand-secondary shrink-0 border border-gold-500/10">
@@ -93,7 +94,7 @@ export default function CartPage() {
 
                       {/* Quantity & Trash */}
                       <div className="flex items-center justify-between sm:justify-end gap-8 w-full sm:w-auto">
-                        
+
                         <div className="flex items-center border border-gold-500/20 bg-brand-secondary rounded-sm">
                           <button
                             onClick={() => updateQuantity(item.id, item.quantity - 1)}
@@ -184,7 +185,7 @@ export default function CartPage() {
                       <span className="font-medium text-brand-dark">₹{shippingFee}</span>
                     )}
                   </div>
-                  
+
                   {shippingFee > 0 && (
                     <p className="text-[11px] text-amber-800 bg-white/60 rounded-sm p-2 flex items-center gap-1 font-sans">
                       <Heart className="h-3 w-3 shrink-0 text-gold-500 animate-pulse" /> Add ₹{(shippingThreshold - cartTotal).toLocaleString('en-IN')} more for free routing.
@@ -201,6 +202,7 @@ export default function CartPage() {
 
                 <div className="space-y-3 pt-2">
                   <Link
+                  prefetch
                     href="/checkout"
                     className="w-full text-center bg-brand-dark hover:bg-gold-500 hover:text-white text-gold-100 uppercase tracking-widest text-xs font-bold py-4 rounded-sm transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md font-sans"
                   >
@@ -208,6 +210,7 @@ export default function CartPage() {
                   </Link>
 
                   <Link
+                  prefetch
                     href="/shop"
                     className="w-full text-center block bg-white border border-gold-500/15 hover:bg-brand-cream text-neutral-600 hover:text-brand-dark uppercase tracking-widest text-xs font-bold py-3 rounded-sm transition-all font-sans"
                   >

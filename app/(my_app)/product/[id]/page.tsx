@@ -23,6 +23,7 @@ export default async function ProductPage({ params }: { params: Promise<{ id: st
             <p className="text-sm font-light text-neutral-400 max-w-sm">We could not locate the handcrafted trinklet item with ID &ldquo;{id}&rdquo;. It may have been retired from our catalog.</p>
           </div>
           <Link
+          prefetch
             href="/shop"
             className="inline-flex bg-neutral-900 border border-transparent hover:bg-neutral-800 text-gold-100 uppercase tracking-widest text-xs font-bold px-8 py-3.5 rounded-sm transition-colors cursor-pointer"
           >
