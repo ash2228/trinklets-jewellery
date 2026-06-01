@@ -469,7 +469,7 @@ export default function CheckoutPage() {
                   Continue Shopping <ArrowRight className="h-4 w-4 ml-2" />
                 </Link>
                 <Link
-                prefetch
+                
                   href="/contact"
                   className="inline-flex items-center justify-center border border-neutral-300 hover:bg-neutral-50 text-neutral-700 uppercase tracking-widest text-xs font-bold px-8 py-3.5 rounded-sm transition-colors"
                 >

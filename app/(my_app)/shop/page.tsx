@@ -220,7 +220,7 @@ function ShopContent() {
                       
                       {/* Interactive details overlay on hover */}
                       <Link
-                      prefetch
+                      
                         href={`/product/${product.id}`}
                         className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer"
                       >
@@ -236,7 +236,7 @@ function ShopContent() {
                         {product.category}
                       </p>
                       <h3 className="font-serif text-base tracking-wide text-neutral-900 leading-tight line-clamp-1">
-                        <Link href={`/product/${product.id}`} className="hover:text-gold-500 transition-colors" prefetch>
+                        <Link href={`/product/${product.id}`} className="hover:text-gold-500 transition-colors" >
                           {product.name}
                         </Link>
                       </h3>

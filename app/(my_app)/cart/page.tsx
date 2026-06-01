@@ -47,7 +47,7 @@ export default function CartPage() {
               </div>
               <div className="pt-2">
                 <Link
-                  prefetch
+                  
                   href="/shop"
                   className="inline-flex bg-brand-dark border border-transparent hover:bg-gold-500 hover:text-white text-gold-100 uppercase tracking-widest text-xs font-bold px-8 py-4 rounded-sm transition-all shadow-md cursor-pointer"
                 >
@@ -202,7 +202,7 @@ export default function CartPage() {
 
                 <div className="space-y-3 pt-2">
                   <Link
-                  prefetch
+                  
                     href="/checkout"
                     className="w-full text-center bg-brand-dark hover:bg-gold-500 hover:text-white text-gold-100 uppercase tracking-widest text-xs font-bold py-4 rounded-sm transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md font-sans"
                   >
@@ -210,7 +210,7 @@ export default function CartPage() {
                   </Link>
 
                   <Link
-                  prefetch
+                  
                     href="/shop"
                     className="w-full text-center block bg-white border border-gold-500/15 hover:bg-brand-cream text-neutral-600 hover:text-brand-dark uppercase tracking-widest text-xs font-bold py-3 rounded-sm transition-all font-sans"
                   >

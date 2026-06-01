@@ -248,7 +248,7 @@ export default function ProductDetailsClient({ product, relatedProducts }: Produ
                             </span>
                           )}
                           <Link
-                          prefetch
+                          
                             href={`/product/${relatedP.id}`}
                             className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center cursor-pointer"
                           >

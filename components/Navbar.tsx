@@ -44,11 +44,10 @@ export default function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 font-sans ${
-          scrolled
+        className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 font-sans ${scrolled
             ? 'bg-white/90 backdrop-blur-md border-b border-gold-500/15 py-3 shadow-xs'
             : 'bg-transparent py-5'
-        }`}
+          }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           {/* Mobile Menu Trigger Button */}
@@ -77,11 +76,10 @@ export default function Navbar() {
                 <Link
                   key={link.name}
                   href={link.href}
-                  className={`hover:text-gold-600 transition-colors relative py-1 ${
-                    isActive ? 'text-gold-600' : ''
-                  }`}
+                  className={`hover:text-gold-600 transition-colors relative py-1 ${isActive ? 'text-gold-600' : ''
+                    }`}
                   onClick={() => setNavigating(true)}
-                  prefetch
+
                 >
                   {link.name}
                   {isActive && (
@@ -161,17 +159,16 @@ export default function Navbar() {
                   const isActive = pathname === link.href;
                   return (
                     <Link
-                    prefetch
-                          key={link.name}
-                          href={link.href}
-                          className={`text-lg font-serif tracking-wide border-b border-neutral-800 pb-3 flex items-center justify-between ${
-                            isActive ? 'text-gold-300' : 'text-neutral-300 hover:text-white'
-                          }`}
-                          onClick={() => setNavigating(true)}
-                        >
-                          {link.name}
-                          <ArrowRight className="h-4 w-4 opacity-50" />
-                        </Link>
+
+                      key={link.name}
+                      href={link.href}
+                      className={`text-lg font-serif tracking-wide border-b border-neutral-800 pb-3 flex items-center justify-between ${isActive ? 'text-gold-300' : 'text-neutral-300 hover:text-white'
+                        }`}
+                      onClick={() => setNavigating(true)}
+                    >
+                      {link.name}
+                      <ArrowRight className="h-4 w-4 opacity-50" />
+                    </Link>
                   );
                 })}
               </div>

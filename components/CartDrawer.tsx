@@ -140,7 +140,7 @@ export default function CartDrawer() {
 
                 <div className="grid grid-cols-1 gap-2 pt-2">
                   <Link
-                  prefetch
+                  
                     href="/checkout"
                     onClick={() => setCartOpen(false)}
                     className="w-full text-center bg-neutral-900 hover:bg-neutral-800 text-gold-100 transition-colors uppercase py-3.5 text-xs font-bold tracking-widest border border-transparent rounded-sm flex items-center justify-center gap-2 shadow-md cursor-pointer"
