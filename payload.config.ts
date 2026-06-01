@@ -5,13 +5,14 @@ import Users from './collections/Users'
 import Media from './collections/Media'
 import sharp from 'sharp'
 import { s3Storage } from "@payloadcms/storage-s3"
+import { Orders } from './collections/Orders'
 
 const config = buildConfig({
   secret: process.env.PAYLOAD_SECRET || '',
   admin: {
     user: 'users',
   },
-  collections: [Users, Products, Media],
+  collections: [Users, Products, Media, Orders],
   db: mongooseAdapter({
     url: process.env.MONGODB_URI || '',
   }),
