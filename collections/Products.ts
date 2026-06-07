@@ -59,6 +59,10 @@ const Products: CollectionConfig = {
           label: 'Bracelets',
           value: 'Bracelets',
         },
+        {
+          label: 'Watches',
+          value: 'Watches'
+        }
       ],
     },
     {

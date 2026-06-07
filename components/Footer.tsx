@@ -106,6 +106,7 @@ export default function Footer() {
             <li><Link href="/shop?category=Necklaces" className="hover:text-gold-300 transition-colors">Necklaces</Link></li>
             <li><Link href="/shop?category=Earrings" className="hover:text-gold-300 transition-colors">Earrings</Link></li>
             <li><Link href="/shop?category=Bracelets" className="hover:text-gold-300 transition-colors">Bracelets</Link></li>
+            <li><Link href="/shop?category=Watches" className="hover:text-gold-300 transition-colors">Watches</Link></li>
             <li><Link href="/shop" className="hover:text-gold-300 transition-colors">Shop All</Link></li>
           </ul>
         </div>

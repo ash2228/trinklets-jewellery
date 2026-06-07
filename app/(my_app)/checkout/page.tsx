@@ -7,10 +7,11 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import { useCart } from '@/context/CartContext';
 import { CheckCircle2, ShoppingBag, CreditCard, ShieldCheck, Mail, ArrowRight, ShieldAlert, CheckCircle, Smartphone, Truck } from 'lucide-react';
+import config from '@/config.json';
 
 export default function CheckoutPage() {
   const { cart, cartTotal, clearCart, addToast } = useCart();
-  
+  const {deliveryFee: shippingFee, subTotalThreshold: deliveryThreshold} = config;
   // Shipping details form
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -40,9 +41,6 @@ export default function CheckoutPage() {
     };
   }, []);
 
-  // Cart summary calculations
-  const shippingThreshold = 699;
-  const shippingFee = cartTotal > shippingThreshold || cartTotal === 0 ? 0 : 65;
   const jewelleryGst = Math.round(cartTotal * 0.03);
   const totalAmount = cartTotal + shippingFee;
 
@@ -380,7 +378,7 @@ export default function CheckoutPage() {
                   </div> */}
                   <div className="flex justify-between">
                     <span>Insured Courier delivery</span>
-                    {shippingFee === 0 ? (
+                    {cartTotal >= deliveryThreshold ? (
                       <span className="text-emerald-700 font-bold uppercase">Complementary</span>
                     ) : (
                       <span className="font-medium text-brand-dark">₹{shippingFee}</span>
@@ -397,7 +395,7 @@ export default function CheckoutPage() {
 
                 <div className="flex items-center gap-2 p-3 bg-white/60 border border-gold-500/15 text-neutral-700 text-xs rounded-sm font-sans">
                   <Truck className="h-4 w-4 shrink-0 text-gold-500" />
-                  <span>Free Delivery on orders above ₹699</span>
+                  <span>Free Delivery on orders above ₹{deliveryThreshold}</span>
                 </div>
               </div>
 

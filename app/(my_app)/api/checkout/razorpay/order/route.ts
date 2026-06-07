@@ -2,11 +2,12 @@ import { NextRequest, NextResponse } from 'next/server';
 import { connectDB, saveInMemoryOrder } from '@/lib/db';
 import Order from '@/models/Order';
 import { getProductByIdentifier } from '@/lib/products';
+import config from '@/config.json';
 
 export async function POST(req: NextRequest) {
   try {
     const { customerName, customerEmail, customerPhone, shippingAddress, items } = await req.json();
-
+    const {deliveryFee, subTotalThreshold} = config;
     if (!customerEmail || !customerName || !shippingAddress || !items || !items.length) {
       return NextResponse.json({ error: 'Missing required checkout information.' }, { status: 400 });
     }
@@ -40,7 +41,7 @@ export async function POST(req: NextRequest) {
       cartSubTotal += price * quantity;
     }
 
-    const shippingFee = cartSubTotal > 699 || cartSubTotal === 0 ? 0 : 65;
+    const shippingFee = cartSubTotal > subTotalThreshold || cartSubTotal === 0 ? 0 : deliveryFee;
     const jewelleryGst = Math.round(cartSubTotal * 0.03);
     const totalAmount = cartSubTotal + shippingFee;
 

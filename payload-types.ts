@@ -159,7 +159,7 @@ export interface Product {
   name: string;
   price: number;
   originalPrice: number;
-  category: 'Rings' | 'Necklaces' | 'Earrings' | 'Bracelets';
+  category: 'Rings' | 'Necklaces' | 'Earrings' | 'Bracelets' | 'Watches';
   description: string;
   inStock?: boolean | null;
   featured?: boolean | null;
