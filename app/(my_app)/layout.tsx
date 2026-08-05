@@ -32,15 +32,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable}`}>
-      <head>
-      <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xxkmx1xt6h");
-      </script>
-      </head>
       <body suppressHydrationWarning className="font-sans antialiased text-brand-dark bg-brand-cream selection:bg-gold-200/40 selection:text-brand-dark overflow-x-hidden min-h-screen">
         <CartProvider>
           <NavigationLoadingProvider>
