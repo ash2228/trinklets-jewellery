@@ -6,6 +6,7 @@ import { CartProvider } from '@/context/CartContext';
 import { NavigationLoadingProvider } from '@/context/NavigationLoading';
 import './globals.css';
 import ToastContainer from '@/components/ToastContainer';
+import AddClarity from '@/hooks/addClarity';
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -36,6 +37,7 @@ export default function RootLayout({
         <CartProvider>
           <NavigationLoadingProvider>
             <ToastContainer />
+            <AddClarity/>
             {children}
           </NavigationLoadingProvider>
         </CartProvider>
